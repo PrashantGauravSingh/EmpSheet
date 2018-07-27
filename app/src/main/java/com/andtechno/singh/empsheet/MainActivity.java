@@ -29,6 +29,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import com.loopj.android.http.*;
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
 //            @Override
 //            public void onStart() {
 //                // called before request is started
+    //             currentTime = Calendar.getInstance().getTime();
 //                long millis = System.currentTimeMillis() % 1000;
 //                Log.e("Async Start time",": "+millis);
 //            }
@@ -127,6 +129,8 @@ public class MainActivity extends AppCompatActivity {
 //
 //                    long millis = System.currentTimeMillis() % 1000;
 //                    Log.e("Async done time",": "+millis);
+
+//                       doneTime = Calendar.getInstance().getTime();
 //                    JSONObject jsonObj = new JSONObject(str1);
 //                    String data = jsonObj.getString("data");
 //                    ja_data = jsonObj.getJSONArray("data");
@@ -178,6 +182,7 @@ public class MainActivity extends AppCompatActivity {
             doSomeWork();
             long millis = System.currentTimeMillis() % 1000;
             Log.e("Http Start time",": "+millis);
+        //    httpcurrentTime = Calendar.getInstance().getTime();
 
         }
 
@@ -220,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
 
             long millis = System.currentTimeMillis() % 1000;
             Log.e("Http Done time",": "+millis);
+     // httpDoneTime = Calendar.getInstance().getTime();
             try {
                     JSONObject jsonObj = new JSONObject(toReturn);
                     String data = jsonObj.getString("data");
